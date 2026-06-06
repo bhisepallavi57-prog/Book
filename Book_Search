@@ -1,0 +1,180 @@
+# Book Information Search System
+
+books = {
+    "Python Basics": """
+Python Basics
+
+Python is a high-level, interpreted programming language known for its simple, English-like syntax and high readability.
+
+Topics:
+- Variables
+- Data Types
+- Loops
+- Functions
+- Object-Oriented Programming (OOP)
+
+Level: Beginner
+""",
+
+    "Data Science": """
+Data Science
+
+Data science is an interdisciplinary field that combines mathematics, statistics, specialized programming (such as Python or R), and domain expertise to extract actionable insights from structured and unstructured data.
+
+Topics:
+- Pandas
+- NumPy
+- Data Cleaning
+- Visualization
+- Machine Learning
+
+Level: Beginner to Intermediate
+""",
+
+    "Machine Learning": """
+Machine Learning
+
+Machine Learning (ML) is a subset of Artificial Intelligence (AI) that enables computers to learn from data and improve at tasks without being explicitly programmed for every step.
+
+Topics:
+- Regression
+- Classification
+- Clustering
+- Model Training
+- Prediction
+
+Level: Intermediate
+""",
+
+    "Deep Learning": """
+Deep Learning
+
+Deep Learning is a specialized subset of Machine Learning inspired by the human brain. It utilizes multi-layered artificial neural networks to automatically learn complex patterns from large amounts of data.
+
+Topics:
+- ANN
+- CNN
+- RNN
+- TensorFlow
+- Neural Networks
+
+Level: Advanced
+""",
+
+    "SQL Guide": """
+SQL Guide
+
+Structured Query Language (SQL) is the universal standard language used to store, manage, and retrieve data from relational databases.
+
+Topics:
+- SELECT
+- JOIN
+- GROUP BY
+- Subqueries
+- Database Management
+
+Level: Beginner
+""",
+
+    "Python for Data Analysis": """
+Python for Data Analysis
+
+Python is the industry-standard programming language for data analysis because of its simple syntax and powerful libraries.
+
+Topics:
+- Pandas
+- NumPy
+- Data Wrangling
+- Data Visualization
+- Statistical Analysis
+
+Level: Intermediate
+""",
+
+    "Artificial Intelligence": """
+Artificial Intelligence
+
+Artificial Intelligence (AI) is a branch of computer science dedicated to building systems capable of performing tasks that typically require human intelligence.
+
+Topics:
+- Machine Learning
+- NLP
+- Computer Vision
+- Expert Systems
+- Robotics
+
+Level: Intermediate
+""",
+
+    "Statistics for Beginners": """
+Statistics for Beginners
+
+Statistics is the mathematical science of collecting, analyzing, and interpreting data.
+
+Topics:
+- Mean
+- Median
+- Mode
+- Probability
+- Hypothesis Testing
+
+Level: Beginner
+""",
+
+    "Power BI Handbook": """
+Power BI Handbook
+
+Power BI is a business intelligence tool developed by Microsoft that transforms raw data into interactive dashboards and meaningful insights.
+
+Features:
+- Connect to multiple data sources
+- Clean and transform data
+- Build data models
+- Create visual reports
+- Share insights securely
+
+Level: Beginner to Intermediate
+""",
+
+    "Excel for Analysts": """
+Excel for Analysts
+
+Excel is one of the most widely used tools for business and data analysis.
+
+Topics:
+- Pivot Tables
+- VLOOKUP
+- XLOOKUP
+- Charts
+- Data Analysis
+
+Level: Beginner
+"""
+}
+
+print("===== BOOK INFORMATION SEARCH SYSTEM =====")
+
+while True:
+
+    print("\nAvailable Books:")
+    for book in books:
+        print("-", book)
+
+    book_name = input("\nEnter Book Name (or type 'exit'): ").strip().lower()
+
+    if book_name == "exit":
+        print("Thank You for Using Book Information Search System!")
+        break
+
+    found = False
+
+    for book in books:
+        if book.lower() == book_name:
+            print("\nBook Found!")
+            print(books[book])
+            found = True
+            break
+
+    if not found:
+        print("\nBook Not Found!")
+        print("Please check the spelling and try again.")
